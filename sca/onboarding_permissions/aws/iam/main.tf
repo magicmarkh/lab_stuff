@@ -4,7 +4,7 @@ provider "aws" {
 
 # Create the IAM policy
 resource "aws_iam_policy" "cyberark_sca_full" {
-  name        = "CyberArkSCAFullPermissions"
+  name        = "CyberArkSCAOnboardingPermissions"
   description = "Complete permissions for CyberArk SCA onboarding, admin, and account management tasks"
 
   policy = jsonencode({
@@ -99,7 +99,7 @@ resource "aws_iam_policy" "cyberark_sca_full" {
 
 # Create the IAM role
 resource "aws_iam_role" "cyberark_sca_admin_role" {
-  name = "CyberArk_SCA_Admin_Role"
+  name = "CyberArk-SCA-Admin-Role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
